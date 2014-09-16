@@ -7,4 +7,6 @@ public class Greeter {
 	System.out.println("Hello, world!");
     }
 
+    //GitHub commit test
+
 }
