@@ -8,4 +8,8 @@ public class BaseChar {
     private int Dexterity = 20;
     public void toName(){
 	Scanner sc = new Scanner(System.in);
-	String name = sc.nextString();
+	System.out.println("What is your name?");
+	String name = sc.nextLine();
+	System.out.println("Your name is " + name);
+    }
+}
