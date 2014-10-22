@@ -6,7 +6,8 @@ public class BaseChar {
     private int Mana = 10;
     private int Attack = 20;
     private int Dexterity = 20;
-    public int getHealth(){
+    
+public int getHealth(){
 	return Health;
     }
 
