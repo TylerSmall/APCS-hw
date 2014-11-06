@@ -51,13 +51,44 @@ public class  Arraystuff {
 	}
 	return king;
     }
+
+    public int freq(int n) {
+	int count = 0;
+	int check = a[n];
+	for (int i = 0; i < a.length; i++) {
+	    if (a[i] == check) {
+		count ++;
+	    }
+	}
+	return count;
+    }
+
+    public int fastmode() {
+	int[] tally = new int[maxVal() + 1];
+	for (int i = 0; i < a.length; i++) {
+	    tally[a[i]]++;
+	}
+	int king = tally[0];
+	int currentmode = 0;
+	for (int i = 0; i < tally.length; i++) {
+	    if (tally[i] > king) {
+		king = tally[i];
+		currentmode = i;
+	    }
+	}
+	return currentmode;
+    }
+	    
+	    
+	
+	    
 	
     
     /*--------------------- Main --------------------*/ 
 
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
-	System.out.println(as);
+	System.out.println(as.fastmode());
 	
     }
     
