@@ -13,12 +13,10 @@ public class ArrayLists {
 
 	ArrayList<Integer> b = new ArrayList<Integer>();
 
-	for (int i = 0; i < a.size(); i++) {
-	    int currentInt = r.nextInt(a.size() - 1);
-	    if  (b.indexOf(currentInt) == -1) {
-		b.add(a.get(currentInt));
-	    } 
-		
+	for (int i = 0; i < 10; i++) {
+	    int CurrentIndex = r.nextInt(a.size());
+	    b.add(a.get(CurrentIndex));
+	    a.remove(a.get(CurrentIndex));
 	}
 
 	System.out.println(b);
